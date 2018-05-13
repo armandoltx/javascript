@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>map</title>
+</head>
+<body>
+  <h1>Learning how to use map</h1>
+  <p>Open the console</p>
+
+  <script>
+    const comidas = [
+        { principal: 'puchero', postre: 'helado' },
+        { principal: 'pizza', postre: 'fruta' },
+        { principal: 'paella', postre: 'tarta' },
+      ];
+
+      //console.log(comidas);
+      // console.log(comidas[0]);
+      // console.log(comidas[0].principal);
+      // console.log(comidas[1].principal);
+      // console.log(comidas[0].postre);
+
+
+//  FORMA ANTIGUA DE HACERLO
+      // var platosPrincipales = [];
+      // var postres =[];
+      // for(var i = 0; i< comidas.length; i++) {
+      //   platosPrincipales.push(comidas[i].principal)
+      //   postres.push(comidas[i].postre)
+      // }
+      // console.log("platos principales => ", platosPrincipales);
+      // console.log("postres => ", postres);
+
+// ES6
+      let platosPrincipales = comidas.map(function (comida) {
+        console.log(comida.principal);
+      });
+
+      let postres = comidas.map(comida => console.log(comida.postre));
+
+  </script>
+</body>
+</html>
